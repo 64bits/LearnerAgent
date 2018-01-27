@@ -10,6 +10,7 @@ namespace LearnerAgent
         private Graph _knowledgeGraph;
         // TODO: This should be calculated using an S-curve or a ReLu
         private float ATTENTION_THRESHOLD = 0.01f;
+        private List<Edge> _visited;
         
         public Utilities(Graph knowledgeGraph)
         {
@@ -70,8 +71,7 @@ namespace LearnerAgent
             {
                 foreach (Node second in attentionNodes)
                 {
-                    // TODO: I'm just connecting directly for now, later might need an indirection
-                    if (first.Edges.TrueForAll((edge) => edge.To != second))
+                    if (!first.ConnectedTo(second))
                     {
                         new Edge(first, second);
                     }
@@ -84,18 +84,21 @@ namespace LearnerAgent
         /// </summary>
         public void WidenPipes()
         {
-            Node pleasure = _knowledgeGraph.GetPleasureNode();
-            foreach (Edge edge in pleasure.Edges)
+            // Perform a breadth first search outwards, increasing pipe strengths as we go
+            _visited = new List<Edge>();
+            WidenPipesHelper(_knowledgeGraph.GetPleasureNode(), 1);
+        }
+
+        void WidenPipesHelper(Node current, int distance)
+        {
+            if (distance >= 3) return;
+            foreach (Edge edge in current.Edges)
             {
-                
-            }
-            
-            foreach (Node node in _knowledgeGraph.Nodes)
-            {
-                foreach (Edge edge in node.Edges)
+                if (!_visited.Contains(edge))
                 {
-                    edge.To.Attention += (node.Attention * 0.25f) * edge.Strength;
-                    node.Attention -= (node.Attention * 0.25f) * edge.Strength;
+                    edge.Strength += (1 / distance) * 0.25f;
+                    _visited.Add(edge);
+                    WidenPipesHelper(edge.GetOther(current), distance+1);
                 }
             }
         }
@@ -105,7 +108,23 @@ namespace LearnerAgent
         /// </summary>
         public void ConstrictPipes()
         {
-            
+            // Perform a breadth first search outwards, decreasing pipe strengths as we go
+            _visited = new List<Edge>();
+            WidenPipesHelper(_knowledgeGraph.GetPainNode(), 1);
+        }
+        
+        void ConstrictPipesHelper(Node current, int distance)
+        {
+            if (distance >= 3) return;
+            foreach (Edge edge in current.Edges)
+            {
+                if (!_visited.Contains(edge))
+                {
+                    edge.Strength -= (1 / distance) * 0.25f;
+                    _visited.Add(edge);
+                    WidenPipesHelper(edge.GetOther(current), distance+1);
+                }
+            }
         }
 
         /// <summary>
@@ -117,8 +136,12 @@ namespace LearnerAgent
             {
                 foreach (Edge edge in node.Edges)
                 {
-                    edge.To.Attention += (node.Attention * 0.25f) * edge.Strength;
-                    node.Attention -= (node.Attention * 0.25f) * edge.Strength;
+                    // Find the delta of the two nodes connected by this edge, then move a factor of that from the
+                    // more attended node to the less attended node
+                    float delta = edge.Nodes[0].Attention - edge.Nodes[1].Attention;
+                    float toMove = delta * edge.Strength;
+                    edge.Nodes[0].Attention -= toMove;
+                    edge.Nodes[1].Attention += toMove;
                 }
             }
         }

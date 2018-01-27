@@ -29,5 +29,15 @@ namespace LearnerAgent
             first.Edges.Add(this);
             second.Edges.Add(this);
         }
+
+        /// <summary>
+        /// Given a node, get the other node from this edge
+        /// </summary>
+        /// <param name="given"></param>
+        /// <returns></returns>
+        public Node GetOther(Node given)
+        {
+            return Nodes[0].Equals(given) ? Nodes[1] : Nodes[0];
+        }
     }
 }

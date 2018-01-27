@@ -57,10 +57,7 @@ namespace LearnerAgent
                 Nodes.Add(input);
                 Node intermediate = new Node(_random.NextDouble());
                 Nodes.Add(intermediate);
-                // TODO: Should this be bidirectional?
                 new Edge(input, intermediate);
-                // Bidirectional connection
-                new Edge(intermediate, _pleasureNode);
                 new Edge(_pleasureNode, intermediate);
             }
             
@@ -72,11 +69,8 @@ namespace LearnerAgent
                 Nodes.Add(input);
                 Node intermediate = new Node(_random.NextDouble());
                 Nodes.Add(intermediate);
-                // TODO: Should this be bidirectional?
                 new Edge(input, intermediate);
-                // Bidirectional connection
                 new Edge(intermediate, _painNode);
-                new Edge(_painNode, intermediate);
             }
             
             // Add the move outputs to the graph as well
