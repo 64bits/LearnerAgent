@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Content" t="Include">
+        <e p="bin" t="Include">
+          <e p="DesktopGL" t="Include">
+            <e p="Content" t="Include">
+              <e p="circle.xnb" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="circle.png" t="Include" />
+        <e p="Content.mgcb" t="Include" />
+        <e p="obj" t="Include">
+          <e p="DesktopGL" t="Include">
+            <e p="Content" t="Include">
+              <e p=".mgcontent" t="Include" />
+              <e p="circle.mgcontent" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Edge.cs" t="Include" />
+      <e p="Entity.cs" t="Include" />
+      <e p="Graph.cs" t="Include" />
+      <e p="LearnerAgent.csproj" t="IncludeRecursive" />
+      <e p="LearnerAgent.sln" t="IncludeFlat" />
+      <e p="MyGame.cs" t="Include" />
+      <e p="Node.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.0" t="Include">
+            <e p="LearnerAgent.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Utilities.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_LearnerAgent.2033735045.00" t="ExcludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/LearnerAgent.deps.json
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/LearnerAgent.runtimeconfig.json
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/LearnerAgent.runtimeconfig.dev.json
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/LearnerAgent.dll
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/LearnerAgent.pdb
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/obj/Debug/netcoreapp2.0/LearnerAgent.csproj.CoreCompileInputs.cache
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/obj/Debug/netcoreapp2.0/LearnerAgent.AssemblyInfoInputs.cache
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/obj/Debug/netcoreapp2.0/LearnerAgent.AssemblyInfo.cs
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/obj/Debug/netcoreapp2.0/LearnerAgent.dll
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/obj/Debug/netcoreapp2.0/LearnerAgent.pdb
+/Users/rohit/Code/Bitbucket/Personal/LearnerAgent/bin/Debug/netcoreapp2.0/Content/circle.xnb
