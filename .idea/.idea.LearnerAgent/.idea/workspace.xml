@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f76d30e-868e-4a9f-b465-0f404728fd95" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnerAgent/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.LearnerAgent/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/circle.xnb" afterPath="$PROJECT_DIR$/Content/bin/DesktopGL/Content/circle.xnb" />
-      <change beforePath="$PROJECT_DIR$/Content/circle.png" afterPath="$PROJECT_DIR$/Content/circle.png" />
-      <change beforePath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/circle.mgcontent" afterPath="$PROJECT_DIR$/Content/obj/DesktopGL/Content/circle.mgcontent" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LearnerAgent/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.LearnerAgent/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/Edge.cs" afterPath="$PROJECT_DIR$/Edge.cs" />
       <change beforePath="$PROJECT_DIR$/Graph.cs" afterPath="$PROJECT_DIR$/Graph.cs" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/Content/circle.xnb" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp2.0/Content/circle.xnb" />
+      <change beforePath="$PROJECT_DIR$/MyGame.cs" afterPath="$PROJECT_DIR$/MyGame.cs" />
+      <change beforePath="$PROJECT_DIR$/Node.cs" afterPath="$PROJECT_DIR$/Node.cs" />
+      <change beforePath="$PROJECT_DIR$/Utilities.cs" afterPath="$PROJECT_DIR$/Utilities.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,17 +21,17 @@
       <file leaf-file-name="MyGame.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyGame.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
-              <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+            <state relative-caret-position="375">
+              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding>
-                <marker date="1517025142000" expanded="true" signature="6:138" ph="..." />
-                <marker date="1517025142000" expanded="true" signature="162:2864" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="200:2862" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="491:650" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="696:897" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="944:1080" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="1139:1649" ph="{...}" />
-                <marker date="1517025142000" expanded="true" signature="1706:2856" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="6:138" ph="..." />
+                <marker date="1517027173000" expanded="true" signature="162:3158" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="200:3156" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="641:800" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="846:1047" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="1094:1230" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="1289:1943" ph="{...}" />
+                <marker date="1517027173000" expanded="true" signature="2000:3150" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -54,16 +54,21 @@
       <file leaf-file-name="Graph.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Graph.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="22" column="86" lean-forward="false" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+            <state relative-caret-position="432">
+              <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
               <folding>
-                <marker date="1517025602000" expanded="true" signature="6:125" ph="..." />
-                <marker date="1517025602000" expanded="true" signature="149:872" ph="{...}" />
-                <marker date="1517025602000" expanded="true" signature="174:870" ph="{...}" />
-                <marker date="1517025602000" expanded="true" signature="433:700" ph="{...}" />
-                <marker date="1517025602000" expanded="true" signature="507:690" ph="/* Create a pleasure node and connect pleasure inputs with one degree of separation ... */" />
-                <marker date="1517025602000" expanded="true" signature="739:784" ph="{...}" />
-                <marker date="1517025602000" expanded="true" signature="819:864" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="6:139" ph="..." />
+                <marker date="1517027962000" expanded="true" signature="163:3281" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="188:3279" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="447:3095" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="676:881" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="1013:1218" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="1353:1558" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="1822:2248" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="2485:2903" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="3022:3085" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="3134:3188" ph="{...}" />
+                <marker date="1517027962000" expanded="true" signature="3223:3273" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -73,12 +78,12 @@
         <entry file="file://$PROJECT_DIR$/Node.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding>
-                <marker date="1517023225000" expanded="true" signature="57:645" ph="{...}" />
-                <marker date="1517023225000" expanded="true" signature="64:344" ph="/// Represents a node in the knowledge graph, which in turn represents some concept. Each node has linkes to ... " />
-                <marker date="1517023225000" expanded="true" signature="366:643" ph="{...}" />
-                <marker date="1517023225000" expanded="true" signature="508:637" ph="{...}" />
+                <marker date="1517027371000" expanded="true" signature="57:692" ph="{...}" />
+                <marker date="1517027371000" expanded="true" signature="64:344" ph="/// Represents a node in the knowledge graph, which in turn represents some concept. Each node has linkes to ... " />
+                <marker date="1517027371000" expanded="true" signature="366:690" ph="{...}" />
+                <marker date="1517027371000" expanded="true" signature="509:684" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -87,22 +92,28 @@
       <file leaf-file-name="Utilities.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utilities.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="278">
+              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
-                <marker date="1517024197000" expanded="true" signature="22:1488" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="51:1486" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="152:218" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="236:418" ph="/// Delete and recreate the attention node, based on attention thresholds - this must happen before the ... " />
-                <marker date="1517024197000" expanded="true" signature="461:494" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="512:709" ph="/// Look at the graph and determine whether the attention threshold on the flagella is enough to cause ... " />
-                <marker date="1517024197000" expanded="true" signature="741:774" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="784:965" ph="/// Look at the graph and create connections between nodes that are above attention threshold, with one ... " />
-                <marker date="1517024197000" expanded="true" signature="1005:1038" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="1048:1191" ph="/// Increase the strength of edges that connect to the pleasure node, based on attention threshold ... " />
-                <marker date="1517024197000" expanded="true" signature="1224:1257" ph="{...}" />
-                <marker date="1517024197000" expanded="true" signature="1267:1410" ph="/// Decrease the strength of the edges that connect to the pain node, based on attention threshold ... " />
-                <marker date="1517024197000" expanded="true" signature="1447:1480" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="22:2184" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="51:2182" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="273:339" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="357:539" ph="/// Delete and recreate the attention node, based on attention thresholds - this must happen before the ... " />
+                <marker date="1517027433000" expanded="true" signature="582:615" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="633:830" ph="/// Look at the graph and determine whether the attention threshold on the flagella is enough to cause ... " />
+                <marker date="1517027433000" expanded="true" signature="862:895" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="905:1086" ph="/// Look at the graph and create connections between nodes that are above attention threshold, with one ... " />
+                <marker date="1517027433000" expanded="true" signature="1126:1159" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="1169:1312" ph="/// Increase the strength of edges that connect to the pleasure node, based on attention threshold ... " />
+                <marker date="1517027433000" expanded="true" signature="1345:1378" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="1388:1531" ph="/// Decrease the strength of the edges that connect to the pain node, based on attention threshold ... " />
+                <marker date="1517027433000" expanded="true" signature="1568:1601" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="1611:1718" ph="/// Propagates attention values throughout the graph as needed ... " />
+                <marker date="1517027433000" expanded="true" signature="1759:1792" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="1802:1881" ph="/// Attention diminishes over time ... " />
+                <marker date="1517027433000" expanded="true" signature="1921:1954" ph="{...}" />
+                <marker date="1517027433000" expanded="true" signature="1964:2107" ph="/// Randomly modifies the values of attention, in hopes to eventually connect all islands together ... " />
+                <marker date="1517027433000" expanded="true" signature="2143:2176" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -111,11 +122,13 @@
       <file leaf-file-name="Edge.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Edge.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="255">
+              <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
-                <marker date="1517023108000" expanded="true" signature="22:104" ph="{...}" />
-                <marker date="1517023108000" expanded="true" signature="46:102" ph="{...}" />
+                <marker date="1517026641000" expanded="true" signature="22:501" ph="{...}" />
+                <marker date="1517026641000" expanded="true" signature="46:499" ph="{...}" />
+                <marker date="1517026641000" expanded="true" signature="144:341" ph="/// Creates a directional edge from the first node to the second node ... " />
+                <marker date="1517026641000" expanded="true" signature="386:493" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -136,6 +149,15 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Next</find>
+      <find>Next(</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>NextDouble(</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -151,11 +173,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Edge.cs" />
-        <option value="$PROJECT_DIR$/Node.cs" />
         <option value="$PROJECT_DIR$/Entity.cs" />
-        <option value="$PROJECT_DIR$/Utilities.cs" />
+        <option value="$PROJECT_DIR$/Edge.cs" />
         <option value="$PROJECT_DIR$/MyGame.cs" />
+        <option value="$PROJECT_DIR$/Node.cs" />
+        <option value="$PROJECT_DIR$/Utilities.cs" />
         <option value="$PROJECT_DIR$/Graph.cs" />
       </list>
     </option>
@@ -257,12 +279,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517019817253</updated>
-      <workItem from="1517019820625" duration="3722000" />
+      <workItem from="1517019820625" duration="5922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3722000" />
+    <option name="totallyTimeSpent" value="5922000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -289,6 +311,7 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914573" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -296,7 +319,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -326,11 +348,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Edge.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding>
-            <marker date="1517023108000" expanded="true" signature="22:104" ph="{...}" />
-            <marker date="1517023108000" expanded="true" signature="46:102" ph="{...}" />
+            <marker date="1517026641000" expanded="true" signature="22:501" ph="{...}" />
+            <marker date="1517026641000" expanded="true" signature="46:499" ph="{...}" />
+            <marker date="1517026641000" expanded="true" signature="144:341" ph="/// Creates a directional edge from the first node to the second node ... " />
+            <marker date="1517026641000" expanded="true" signature="386:493" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -346,70 +370,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MyGame.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding>
+            <marker date="1517027173000" expanded="true" signature="6:138" ph="..." />
+            <marker date="1517027173000" expanded="true" signature="162:3158" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="200:3156" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="641:800" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="846:1047" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="1094:1230" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="1289:1943" ph="{...}" />
+            <marker date="1517027173000" expanded="true" signature="2000:3150" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Node.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding>
-            <marker date="1517023225000" expanded="true" signature="57:645" ph="{...}" />
-            <marker date="1517023225000" expanded="true" signature="64:344" ph="/// Represents a node in the knowledge graph, which in turn represents some concept. Each node has linkes to ... " />
-            <marker date="1517023225000" expanded="true" signature="366:643" ph="{...}" />
-            <marker date="1517023225000" expanded="true" signature="508:637" ph="{...}" />
+            <marker date="1517027371000" expanded="true" signature="57:692" ph="{...}" />
+            <marker date="1517027371000" expanded="true" signature="64:344" ph="/// Represents a node in the knowledge graph, which in turn represents some concept. Each node has linkes to ... " />
+            <marker date="1517027371000" expanded="true" signature="366:690" ph="{...}" />
+            <marker date="1517027371000" expanded="true" signature="509:684" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utilities.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="278">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding>
-            <marker date="1517024197000" expanded="true" signature="22:1488" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="51:1486" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="152:218" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="236:418" ph="/// Delete and recreate the attention node, based on attention thresholds - this must happen before the ... " />
-            <marker date="1517024197000" expanded="true" signature="461:494" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="512:709" ph="/// Look at the graph and determine whether the attention threshold on the flagella is enough to cause ... " />
-            <marker date="1517024197000" expanded="true" signature="741:774" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="784:965" ph="/// Look at the graph and create connections between nodes that are above attention threshold, with one ... " />
-            <marker date="1517024197000" expanded="true" signature="1005:1038" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="1048:1191" ph="/// Increase the strength of edges that connect to the pleasure node, based on attention threshold ... " />
-            <marker date="1517024197000" expanded="true" signature="1224:1257" ph="{...}" />
-            <marker date="1517024197000" expanded="true" signature="1267:1410" ph="/// Decrease the strength of the edges that connect to the pain node, based on attention threshold ... " />
-            <marker date="1517024197000" expanded="true" signature="1447:1480" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGame.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <marker date="1517025142000" expanded="true" signature="6:138" ph="..." />
-            <marker date="1517025142000" expanded="true" signature="162:2864" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="200:2862" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="491:650" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="696:897" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="944:1080" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="1139:1649" ph="{...}" />
-            <marker date="1517025142000" expanded="true" signature="1706:2856" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="22:2184" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="51:2182" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="273:339" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="357:539" ph="/// Delete and recreate the attention node, based on attention thresholds - this must happen before the ... " />
+            <marker date="1517027433000" expanded="true" signature="582:615" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="633:830" ph="/// Look at the graph and determine whether the attention threshold on the flagella is enough to cause ... " />
+            <marker date="1517027433000" expanded="true" signature="862:895" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="905:1086" ph="/// Look at the graph and create connections between nodes that are above attention threshold, with one ... " />
+            <marker date="1517027433000" expanded="true" signature="1126:1159" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="1169:1312" ph="/// Increase the strength of edges that connect to the pleasure node, based on attention threshold ... " />
+            <marker date="1517027433000" expanded="true" signature="1345:1378" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="1388:1531" ph="/// Decrease the strength of the edges that connect to the pain node, based on attention threshold ... " />
+            <marker date="1517027433000" expanded="true" signature="1568:1601" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="1611:1718" ph="/// Propagates attention values throughout the graph as needed ... " />
+            <marker date="1517027433000" expanded="true" signature="1759:1792" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="1802:1881" ph="/// Attention diminishes over time ... " />
+            <marker date="1517027433000" expanded="true" signature="1921:1954" ph="{...}" />
+            <marker date="1517027433000" expanded="true" signature="1964:2107" ph="/// Randomly modifies the values of attention, in hopes to eventually connect all islands together ... " />
+            <marker date="1517027433000" expanded="true" signature="2143:2176" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Graph.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22" column="86" lean-forward="false" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
+        <state relative-caret-position="432">
+          <caret line="94" column="9" lean-forward="false" selection-start-line="94" selection-start-column="9" selection-end-line="94" selection-end-column="9" />
           <folding>
-            <marker date="1517025602000" expanded="true" signature="6:125" ph="..." />
-            <marker date="1517025602000" expanded="true" signature="149:872" ph="{...}" />
-            <marker date="1517025602000" expanded="true" signature="174:870" ph="{...}" />
-            <marker date="1517025602000" expanded="true" signature="433:700" ph="{...}" />
-            <marker date="1517025602000" expanded="true" signature="507:690" ph="/* Create a pleasure node and connect pleasure inputs with one degree of separation ... */" />
-            <marker date="1517025602000" expanded="true" signature="739:784" ph="{...}" />
-            <marker date="1517025602000" expanded="true" signature="819:864" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="6:139" ph="..." />
+            <marker date="1517027962000" expanded="true" signature="163:3281" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="188:3279" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="447:3095" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="676:881" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="1013:1218" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="1353:1558" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="1822:2248" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="2485:2903" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="3022:3085" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="3134:3188" ph="{...}" />
+            <marker date="1517027962000" expanded="true" signature="3223:3273" ph="{...}" />
           </folding>
         </state>
       </provider>

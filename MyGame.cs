@@ -8,6 +8,11 @@ namespace LearnerAgent
     
     public class MyGame : Game
     {
+        // Temporary variables for testing
+        public static int X = 0;
+        public static int Y = 0;
+        
+        // Set the camera scale
         private float SPRITE_SCALE = 0.25f;
         
         private Utilities _agentUtilities;
@@ -45,11 +50,14 @@ namespace LearnerAgent
                 Exit();
 
             // Call the various utility functions
+            _agentUtilities.GenerateNoise();
             _agentUtilities.RecalculateAttention();
             _agentUtilities.CreateConnections();
             _agentUtilities.WidenPipes();
             _agentUtilities.ConstrictPipes();
             _agentUtilities.MoveAgent();
+            _agentUtilities.PropagateAttention();
+            _agentUtilities.DiminishAttention();
 
             base.Update(gameTime);
         }
@@ -73,7 +81,7 @@ namespace LearnerAgent
                 null,
                 null,
                 transform);
-            _spriteBatch.Draw(_agent, new Rectangle(0, 0, 128, 128), Color.White);
+            _spriteBatch.Draw(_agent, new Rectangle(X, Y, 128, 128), Color.White);
             _spriteBatch.End();
 
             base.Draw(gameTime);

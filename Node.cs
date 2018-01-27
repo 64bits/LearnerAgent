@@ -12,10 +12,11 @@ namespace LearnerAgent
         public float Attention { get; set; }
         public List<Edge> Edges { get; }
         
-        public Node(float originalValue)
+        public Node(double originalValue)
         {
             // We can start off with a random amount of attention > 0
-            Attention = originalValue;
+            Attention = (float) originalValue;
+            Edges = new List<Edge>();
         }
     }
 }

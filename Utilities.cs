@@ -3,6 +3,8 @@
     public class Utilities
     {
         private Graph _knowledgeGraph;
+        // TODO: This should be calculated using an S-curve or a ReLu
+        private float ATTENTION_THRESHOLD = 0.25f;
         
         public Utilities(Graph knowledgeGraph)
         {
@@ -48,6 +50,30 @@
         /// Decrease the strength of the edges that connect to the pain node, based on attention threshold
         /// </summary>
         public void ConstrictPipes()
+        {
+            
+        }
+
+        /// <summary>
+        /// Propagates attention values throughout the graph as needed
+        /// </summary>
+        public void PropagateAttention()
+        {
+            
+        }
+
+        /// <summary>
+        /// Attention diminishes over time
+        /// </summary>
+        public void DiminishAttention()
+        {
+            
+        }
+
+        /// <summary>
+        /// Randomly modifies the values of attention, in hopes to eventually connect all islands together
+        /// </summary>
+        public void GenerateNoise()
         {
             
         }
