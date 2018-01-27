@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xna.Framework;
 
 namespace LearnerAgent
@@ -55,7 +57,26 @@ namespace LearnerAgent
         /// </summary>
         public void CreateConnections()
         {
-            
+            List<Node> attentionNodes = new List<Node>();
+            foreach (Node node in _knowledgeGraph.Nodes)
+            {
+                if (node.Attention >= ATTENTION_THRESHOLD)
+                {
+                    attentionNodes.Add(node);
+                }
+            }
+
+            foreach (Node first in attentionNodes)
+            {
+                foreach (Node second in attentionNodes)
+                {
+                    // TODO: I'm just connecting directly for now, later might need an indirection
+                    if (first.Edges.TrueForAll((edge) => edge.To != second))
+                    {
+                        new Edge(first, second);
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -79,7 +100,13 @@ namespace LearnerAgent
         /// </summary>
         public void PropagateAttention()
         {
-            
+            foreach (Node node in _knowledgeGraph.Nodes)
+            {
+                foreach (Edge edge in node.Edges)
+                {
+                    edge.To.Attention += node.Attention * edge.Strength;
+                }
+            }
         }
 
         /// <summary>
@@ -89,7 +116,7 @@ namespace LearnerAgent
         {
             foreach (Node node in _knowledgeGraph.Nodes)
             {
-                node.Attention -= 0.05f;
+                node.Attention -= 0.5f;
             }
         }
 
