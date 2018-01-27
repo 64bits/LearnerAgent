@@ -49,6 +49,9 @@ namespace LearnerAgent
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            // Pretend there is food up north
+            _knowledgeGraph.GetPleasureInputs()[0].Attention = 0.5f;
+            
             // Call the various utility functions
             _agentUtilities.GenerateNoise();
             _agentUtilities.RecalculateAttention();

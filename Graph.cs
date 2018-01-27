@@ -105,5 +105,10 @@ namespace LearnerAgent
         {
             return (_random.NextDouble() - 0.5) * 0.025;
         }
+
+        public Node[] GetPleasureInputs()
+        {
+            return _pleasureInputs;
+        }
     }
 }
