@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace LearnerAgent
 {
@@ -14,7 +15,11 @@ namespace LearnerAgent
         public float Attention
         {
             get => attention;
-            set => attention = (float) (2 / (1 + Math.Exp(-2 * value))) - 1;
+            set
+            {
+                float c = (float) (2 / (1 + Math.Exp(-2 * value))) - 1;
+                attention = c < 0 ? 0 : c;
+            }
         }
 
         public List<Edge> Edges { get; }

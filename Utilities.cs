@@ -9,7 +9,7 @@ namespace LearnerAgent
     {
         private Graph _knowledgeGraph;
         // TODO: This should be calculated using an S-curve or a ReLu
-        private float ATTENTION_THRESHOLD = 0.25f;
+        private float ATTENTION_THRESHOLD = 0.4f;
         
         public Utilities(Graph knowledgeGraph)
         {
