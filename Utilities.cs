@@ -1,4 +1,7 @@
-﻿namespace LearnerAgent
+﻿using System;
+using Microsoft.Xna.Framework;
+
+namespace LearnerAgent
 {
     public class Utilities
     {
@@ -26,7 +29,24 @@
         /// </summary>
         public void MoveAgent()
         {
-            
+            Node[] outputs = _knowledgeGraph.GetMoveOutputs();
+            Console.WriteLine(outputs[0].Attention + "," + outputs[1].Attention + "," + outputs[2].Attention + "," + outputs[3].Attention);
+            if (outputs[0].Attention > ATTENTION_THRESHOLD)
+            {
+                MyGame.Y += 1;
+            }
+            if (outputs[1].Attention > ATTENTION_THRESHOLD)
+            {
+                MyGame.X += 1;
+            }
+            if (outputs[2].Attention > ATTENTION_THRESHOLD)
+            {
+                MyGame.Y -= 1;
+            }
+            if (outputs[3].Attention > ATTENTION_THRESHOLD)
+            {
+                MyGame.X -= 1;
+            }
         }
 
         /// <summary>
@@ -67,7 +87,10 @@
         /// </summary>
         public void DiminishAttention()
         {
-            
+            foreach (Node node in _knowledgeGraph.Nodes)
+            {
+                node.Attention -= 0.05f;
+            }
         }
 
         /// <summary>
@@ -75,7 +98,10 @@
         /// </summary>
         public void GenerateNoise()
         {
-            
+            foreach (Node node in _knowledgeGraph.Nodes)
+            {
+                node.Attention += (float) _knowledgeGraph.GetRandomNoise();
+            }
         }
     }
 }

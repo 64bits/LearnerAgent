@@ -7,7 +7,7 @@ namespace LearnerAgent
 {
     public class Graph
     {
-        private List<Node> Nodes { get; set; }
+        public List<Node> Nodes { get; set; }
 
         private Node _pleasureNode;
         private Node _painNode;
@@ -15,45 +15,47 @@ namespace LearnerAgent
         private Node[] _painInputs;
         private Node[] _moveOutputs;
 
+        private Random _random;
+
         public Graph()
         {
             Nodes = new List<Node>();
-            Random random = new Random();
+            _random = new Random();
             
             // Create four pleasure input nodes, one per cardinal direction
             _pleasureInputs = new []
             {
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble())
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble())
             };
             
             // Create four pain input nodes, one per cardinal direction
             _painInputs = new []
             {
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble())
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble())
             }; 
             
             // Create four move output nodes, one per cardinal direction
             _moveOutputs = new []
             {
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble()), 
-                new Node(random.NextDouble())
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble()), 
+                new Node(_random.NextDouble())
             }; 
             
             // Create a pleasure node and connect pleasure inputs with one degree of separation each
-            _pleasureNode = new Node(random.NextDouble());
+            _pleasureNode = new Node(_random.NextDouble());
             Nodes.Add(_pleasureNode);
             foreach(Node input in _pleasureInputs)
             {
                 Nodes.Add(input);
-                Node intermediate = new Node(random.NextDouble());
+                Node intermediate = new Node(_random.NextDouble());
                 Nodes.Add(intermediate);
                 // TODO: Should this be bidirectional?
                 new Edge(input, intermediate);
@@ -63,12 +65,12 @@ namespace LearnerAgent
             }
             
             // Create a pain node and connect pain inputs with one degree of separation
-            _painNode = new Node(random.NextDouble());
+            _painNode = new Node(_random.NextDouble());
             Nodes.Add(_painNode);
             foreach(Node input in _painInputs)
             {
                 Nodes.Add(input);
-                Node intermediate = new Node(random.NextDouble());
+                Node intermediate = new Node(_random.NextDouble());
                 Nodes.Add(intermediate);
                 // TODO: Should this be bidirectional?
                 new Edge(input, intermediate);
@@ -92,6 +94,16 @@ namespace LearnerAgent
         public Node GetPainNode()
         {
             return _painNode;
+        }
+
+        public Node[] GetMoveOutputs()
+        {
+            return _moveOutputs;
+        }
+
+        public double GetRandomNoise()
+        {
+            return (_random.NextDouble() - 0.5) * 0.025;
         }
     }
 }

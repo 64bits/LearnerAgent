@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace LearnerAgent
 {
@@ -9,7 +10,13 @@ namespace LearnerAgent
     /// </summary>
     public class Node
     {
-        public float Attention { get; set; }
+        private float attention;
+        public float Attention
+        {
+            get => attention;
+            set => attention = (float) (2 / (1 + Math.Exp(-2 * value))) - 1;
+        }
+
         public List<Edge> Edges { get; }
         
         public Node(double originalValue)
