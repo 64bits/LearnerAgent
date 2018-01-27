@@ -34,22 +34,10 @@ namespace LearnerAgent
         {
             Node[] outputs = _knowledgeGraph.GetMoveOutputs();
             Console.WriteLine(outputs[0].Attention + "," + outputs[1].Attention + "," + outputs[2].Attention + "," + outputs[3].Attention);
-            if (outputs[0].Attention > ATTENTION_THRESHOLD)
-            {
-                MyGame.Y += 1;
-            }
-            if (outputs[1].Attention > ATTENTION_THRESHOLD)
-            {
-                MyGame.X += 1;
-            }
-            if (outputs[2].Attention > ATTENTION_THRESHOLD)
-            {
-                MyGame.Y -= 1;
-            }
-            if (outputs[3].Attention > ATTENTION_THRESHOLD)
-            {
-                MyGame.X -= 1;
-            }
+            MyGame.Y += outputs[0].Attention * 100;
+            MyGame.X += outputs[1].Attention * 100;
+            MyGame.Y -= outputs[2].Attention * 100;
+            MyGame.X -= outputs[3].Attention * 100;
         }
 
         /// <summary>
@@ -162,7 +150,8 @@ namespace LearnerAgent
         /// </summary>
         public void GenerateNoise()
         {
-            foreach (Node node in _knowledgeGraph.Nodes)
+            // Only generate noise in the movement nodes, not in the knowledge graph
+            foreach (Node node in _knowledgeGraph.GetMoveOutputs())
             {
                 node.Attention += (float) _knowledgeGraph.GetRandomNoise();
             }
