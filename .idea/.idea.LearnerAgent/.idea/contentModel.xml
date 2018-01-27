@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
+      <e p="AgentEntity.cs" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Content" t="Include">
         <e p="bin" t="Include">
@@ -25,6 +26,7 @@
       </e>
       <e p="Edge.cs" t="Include" />
       <e p="Entity.cs" t="Include" />
+      <e p="FoodEntity.cs" t="Include" />
       <e p="Graph.cs" t="Include" />
       <e p="LearnerAgent.csproj" t="IncludeRecursive" />
       <e p="LearnerAgent.sln" t="IncludeFlat" />

@@ -17,8 +17,8 @@ namespace LearnerAgent
             get => attention;
             set
             {
-                float c = (float) (2 / (1 + Math.Exp(-2 * value))) - 1;
-                attention = c < 0 ? 0 : c;
+                //float c = (float) (2 / (1 + Math.Exp(-2 * value))) - 1;
+                attention = value < 0 ? 0 : value;
             }
         }
 

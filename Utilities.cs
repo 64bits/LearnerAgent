@@ -9,7 +9,7 @@ namespace LearnerAgent
     {
         private Graph _knowledgeGraph;
         // TODO: This should be calculated using an S-curve or a ReLu
-        private float ATTENTION_THRESHOLD = 0.4f;
+        private float ATTENTION_THRESHOLD = 0.01f;
         
         public Utilities(Graph knowledgeGraph)
         {
@@ -104,7 +104,8 @@ namespace LearnerAgent
             {
                 foreach (Edge edge in node.Edges)
                 {
-                    edge.To.Attention += node.Attention * edge.Strength;
+                    edge.To.Attention += (node.Attention * 0.25f) * edge.Strength;
+                    node.Attention -= (node.Attention * 0.25f) * edge.Strength;
                 }
             }
         }
@@ -116,7 +117,7 @@ namespace LearnerAgent
         {
             foreach (Node node in _knowledgeGraph.Nodes)
             {
-                node.Attention -= 0.5f;
+                node.Attention -= 0.1f;
             }
         }
 
