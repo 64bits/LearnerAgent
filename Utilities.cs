@@ -84,7 +84,20 @@ namespace LearnerAgent
         /// </summary>
         public void WidenPipes()
         {
+            Node pleasure = _knowledgeGraph.GetPleasureNode();
+            foreach (Edge edge in pleasure.Edges)
+            {
+                
+            }
             
+            foreach (Node node in _knowledgeGraph.Nodes)
+            {
+                foreach (Edge edge in node.Edges)
+                {
+                    edge.To.Attention += (node.Attention * 0.25f) * edge.Strength;
+                    node.Attention -= (node.Attention * 0.25f) * edge.Strength;
+                }
+            }
         }
 
         /// <summary>
